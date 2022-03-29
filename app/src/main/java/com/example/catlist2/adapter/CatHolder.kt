@@ -8,11 +8,15 @@ import androidx.core.content.ContextCompat.startActivities
 import androidx.recyclerview.widget.RecyclerView
 import com.example.catlist2.DetailActivity
 import com.example.catlist2.R
+import com.example.catlist2.databinding.ItemcatBinding
 import com.example.catlist2.model.CatListApiItem
 
-class CatHolder(private  val view: View): RecyclerView.ViewHolder(view)  {
+
+class CatHolder(private val view: View): RecyclerView.ViewHolder(view)  {
 
     val name = view.findViewById<TextView>(R.id.tvNameCat)
+
+
     lateinit var informacion : String
     lateinit var url :String
     lateinit var photo: String

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+
 }
 
 android {
@@ -8,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.catlist2"
-        minSdk 21
+        minSdk 23
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -29,9 +31,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-    buildFeatures{
-        viewBinding = true
+    viewBinding {
+        enabled = true
     }
 }
 
@@ -62,4 +63,17 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+    //corroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+
+    //paging3
+    implementation "androidx.paging:paging-runtime:3.1.1"
+
+    //optional dependency for RxJava support
+    implementation "androidx.paging:paging-rxjava2-ktx:3.1.1"
+    //optional room db
+    //implementation "androidx.room:room-runtime:2.5.0"
+    //implementation "androidx.room:room-ktx:2.5.0"
+    //kapt "androidx.room:room-compiler:2.5.0"
+
 }
