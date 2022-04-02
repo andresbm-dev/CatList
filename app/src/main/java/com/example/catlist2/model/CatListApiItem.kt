@@ -1,7 +1,14 @@
 package com.example.catlist2.model
 
+import com.example.catlist2.model.database.CatEntity
+
 data class CatListApiItem(
-    val adaptability: Int,
+    val id: String,
+    val image: Image,
+    val wikipedia_url: String,
+    val name: String,
+    val description: String,
+    /*val adaptability: Int,
     val affection_level: Int,
     val alt_names: String,
     val bidability: Int,
@@ -10,21 +17,18 @@ data class CatListApiItem(
     val child_friendly: Int,
     val country_code: String,
     val country_codes: String,
-    val description: String,
     val dog_friendly: Int,
     val energy_level: Int,
     val experimental: Int,
-    val grooming: Int,
-    val hairless: Int,
+    //val grooming: Int,
+    //val hairless: Int,
     val health_issues: Int,
     val hypoallergenic: Int,
-    val id: String,
-    val image: Image,
+
     val indoor: Int,
     val intelligence: Int,
     val lap: Int,
     val life_span: String,
-    val name: String,
     val natural: Int,
     val origin: String,
     val rare: Int,
@@ -39,6 +43,7 @@ data class CatListApiItem(
     val vcahospitals_url: String,
     val vetstreet_url: String,
     val vocalisation: Int,
-    val weight: Weight,
-    val wikipedia_url: String
+    val weight: Weight,*/
+
 )
+//fun CatListApiItem.toDatabase() = CatEntity(name = name)

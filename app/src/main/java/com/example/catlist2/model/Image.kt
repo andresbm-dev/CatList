@@ -6,3 +6,7 @@ data class Image(
     val url: String,
     val width: Int
 )
+/*data class Weight(
+    val imperial: String,
+    val metric: String
+)*/
